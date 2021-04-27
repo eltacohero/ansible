@@ -1,8 +1,8 @@
-name: Playbook
-hosts: host1
-remote_user: root
-tasks:
-  - name: Install vim
-    apt:
-      name: vim
-      state: present
+- name: Playbook
+  hosts: host1
+  remote_user: root
+  tasks:
+    - name: Install vim
+      apt:
+        name: vim
+        state: present
