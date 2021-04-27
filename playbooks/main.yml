@@ -2,11 +2,10 @@
   remote_user: root
   vars_files:
     - "vars/{{env}}_vars.yml"
+    - "vars/secret_{{env}}.yml" 
   tasks:
-    - name: debug
-      debug:
-        msg: "bonjour, ici l'environnement {{env}}"
-    - name: Install vim
-      apt:
-        name: vim
-        state: "{{vim_state}}"
+    - name: create user
+      user: 
+        name: "{{user}}"
+        password: "{{password | password_hash('sha512')}}"
+        state: present
