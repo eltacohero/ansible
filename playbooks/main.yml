@@ -2,10 +2,17 @@
   remote_user: root
   vars_files:
     - "vars/{{env}}_vars.yml"
-    - "vars/secret_{{env}}.yml" 
+    - "vars/secret_{{env}}.yml"
+  vars:
+    usersname:
+      - user01
+      - user02
+      - user03        
   tasks:
     - name: create user
       user: 
-        name: "{{user}}"
+        name: "{{item}}"
         password: "{{password | password_hash('sha512')}}"
         state: present
+      with_items: "{{usersname}}"
+      when: ansible_distribution == "Ubuntu"
