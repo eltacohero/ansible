@@ -1,4 +1,5 @@
 dependencies:
   - role: create_user
     vars:
-      usersname:  apache_sa     
+      usersname:  apache_sa
+      role: apache     
