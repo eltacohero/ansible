@@ -10,4 +10,5 @@
       - user03  
   roles: 
     - { role: create_user }
-    - { role: install_vim } 
+    - { role: install_vim }
+    - { role: apache } 
