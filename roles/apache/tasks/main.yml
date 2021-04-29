@@ -10,3 +10,8 @@
   service:
     name: apache2      
     state: started
+
+- name: copy toto.txt
+  copy:
+    src: './files/toto.txt'
+    dest: '/tmp/toto.txt'
