@@ -2,8 +2,10 @@
   apt:
     name: apache2
   register: install_result
+
 - name:
   debug: var=install_result
+
 - name: start service    
   service:
     name: apache2      
