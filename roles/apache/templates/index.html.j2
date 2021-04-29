@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Sup de Vinci Website</title>
+	<title>Sup de Vinci Website</title>
 	</head>
 	<body>
-		{% if env == "dev" %}
-			<p>Welcome on dev's Sup de Vinci Website. This site has been created by Ansible !</p>
-		{% elif env == "prod" %}
-			<p>Welcome on prod's Sup de Vinci Website. This site has been created by Ansible !</p>
-		{% endif %}
+	{% if env == "dev" %}
+		<p>Welcome on Sup de Vinci's development website. This site has been created by Ansible !</p>
+	{% elif env == "int" %}
+		<p>Welcome on Sup de Vinci's integration website. This site has been created by Ansible !</p>
+	{% endif %}
 	</body>
 </html>
