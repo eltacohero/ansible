@@ -11,7 +11,7 @@
     name: apache2      
     state: started
 
-- name: copy toto.txt
-  copy:
-    src: './files/toto.txt'
-    dest: '/tmp/toto.txt'
+- name: copy index.html
+  template:
+    src: './templates/index.html.j2'
+    dest: '/var/www/html/index.html'

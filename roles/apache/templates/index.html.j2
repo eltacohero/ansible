@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sup de Vinci Website</title>
+	</head>
+	<body>
+		{% if env == "dev" %}
+			<p>Welcome on dev's Sup de Vinci Website. This site has been created by Ansible !</p>
+		{% elif env == "prod" %}
+			<p>Welcome on prod's Sup de Vinci Website. This site has been created by Ansible !</p>
+		{% endif %}
+	</body>
+</html>
