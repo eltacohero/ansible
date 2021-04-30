@@ -9,6 +9,6 @@
       - user02
       - user03  
   roles: 
-    - { role: create_user }
-    - { role: install_vim }
-    - { role: apache } 
+    - role: create_user
+    - role: install_vim
+    - role: apache 
