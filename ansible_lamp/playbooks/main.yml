@@ -5,6 +5,7 @@
   remote_user: root
   vars_files:
     - "vars/vars.yml"
+    - "vars/secret.yml"  
 
   roles:
     - role: apache
