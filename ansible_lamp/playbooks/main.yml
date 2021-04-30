@@ -1,0 +1,7 @@
+---
+- remote_user: root
+  
+  roles:
+    - role: apache
+    - role: php
+    - role: mysql  
