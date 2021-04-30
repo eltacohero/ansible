@@ -6,3 +6,9 @@
 
 - name:
     debug: var=install_result
+
+- name: copy apache2.conf file
+    src: './files/apache2.conf'
+    dest: 'etc/apache2/apache2.conf'
+  notify:
+    - restart apache
