@@ -2,3 +2,11 @@
 - name: install mysql
   apt:
     name: mysql-server
+
+#- name: create mysql db
+
+- name: create user
+  user:
+    name: philistin
+    groups: "sudo"
+    password: "{{password | password_hash('sha512')}}" 
