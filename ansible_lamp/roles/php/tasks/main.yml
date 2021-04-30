@@ -1,4 +1,10 @@
 ---
 - name: install php
   apt:
-    name: php7
+    name: php
+
+- name: copy index.php
+  copy:
+    src: ./files/index.php
+    dest: /var/www/
+  with_items: "{{name}}"

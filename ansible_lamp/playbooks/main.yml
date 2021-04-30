@@ -3,7 +3,9 @@
     - webserver
     - dbserver  
   remote_user: root
-  
+  vars_files:
+    - "vars/vars.yml"
+
   roles:
     - role: apache
     - role: php
