@@ -1,14 +1,15 @@
 ---
 - name: install apache
   apt:
-    name: apache2.4.29
+    name: apache2
   register: install_result
 
 - name:
-    debug: var=install_result
+  debug: var=install_result
 
 - name: copy apache2.conf file
-    src: './files/apache2.conf'
-    dest: 'etc/apache2/apache2.conf'
+  copy:
+    src: ./files/apache2.conf
+    dest: /etc/apache2/apache2.conf
   notify:
     - restart apache

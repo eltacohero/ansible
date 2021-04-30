@@ -1,8 +1,11 @@
 ---
-- remote_user: root
+- hosts: 
+    - webserver
+    - dbserver  
+  remote_user: root
   
   roles:
     - role: apache
     - role: php
     - role: mysql
-  when: ansible_os_family | lower == "ubuntu"  
+  #when: ansible_os_family | lower == "ubuntu"  
