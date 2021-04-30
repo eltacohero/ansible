@@ -1,0 +1,8 @@
+---
+- name: install apache
+  apt:
+    name: apache2.4.29
+  register: install_result
+
+- name:
+    debug: var=install_result
